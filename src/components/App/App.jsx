@@ -1,31 +1,15 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../redux/operations';
-import { selectError, selectIsLoading } from '../../redux/selectors';
+import { Route, Routes } from 'react-router-dom';
+import { ProductsPage } from 'pages/ProductsPage';
+import { Homepage } from 'pages/Homepage';
+import { SharedLayout } from 'components/SharedLayout/SharedLayout';
 
 export const App = () => {
-  const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
-
   return (
-    <>
-      {isLoading && !error && <p>Loading products...</p>}
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-        }}
-      >
-        React homework template
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Homepage />} />
+        <Route path="products" element={<ProductsPage />} />
+      </Route>
+    </Routes>
   );
 };

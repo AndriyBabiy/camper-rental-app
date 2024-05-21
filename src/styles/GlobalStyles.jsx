@@ -2,6 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 import { theme } from 'styles/theme';
 
 export const GlobalStyles = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -24,7 +30,13 @@ export const GlobalStyles = createGlobalStyle`
   h5,
   h6,
   p {
-    margin-top: 0;
+    display: block;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
   }
 
   ul,
@@ -35,6 +47,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   button {
+
+
     padding: 0;
     border: none;
     font: inherit;

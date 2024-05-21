@@ -2,7 +2,7 @@
   "name": "camper-rental-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AndriyBabiy.github.io/camper-rental-app/",
+  "homepage": "https://andriybabiy.github.io/camper-rental-app/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
     "@testing-library/jest-dom": "^5.16.3",

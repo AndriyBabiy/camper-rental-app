@@ -22,7 +22,7 @@ const filterSlice = createSlice({
       state.filterLocation = action.payload;
     },
     setEquipmentFilterValue(state, action) {
-      state.filterEquipment = action.payload;
+      state.filterEquipment[action.payload.equipment] = action.payload.value;
     },
     setTypeFilterValue(state, action) {
       state.filterType = action.payload;
